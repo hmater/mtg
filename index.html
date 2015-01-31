@@ -47,7 +47,7 @@
 			width: 15%;
 			height: 10%;
 			/*background-color: rgba(80,80,80,0.4);*/
-			background-color: rgba(100,100,100,0.3);
+			background-color: rgba(10,10,10,0.6);
 			float: left;
 			display: inline;
 			text-align: center;
@@ -64,18 +64,18 @@
 	<div id="cont">	
 
 		<div id="barra1">
-			<div id="vida_izq" onclick="perder1vida(this)" style="display:inline">20</div>
+			<div id="vida_izq" ontouchstart="perder1vida(this)" style="display:inline">20</div>
 			<div style="display:inline">/</div>
-			<div id="vida_der" onclick="perder1vida(this)" style="display:inline">20</div>
+			<div id="vida_der" ontouchstart="perder1vida(this)" style="display:inline">20</div>
 		</div>
 
 		<div id="barra2">
 
-			<div class="boton" onclick="ganar1vida(document.getElementById('vida_izq'))">+1</div>
-			<div class="boton" onclick="ganar5vidas(document.getElementById('vida_izq'))">+5</div>
+			<div class="boton" ontouchstart="ganar1vida(document.getElementById('vida_izq'))">+1</div>
+			<div class="boton" ontouchstart="ganar5vidas(document.getElementById('vida_izq'))">+5</div>
 			<div class="boton" id="boton2">REPITO!</div></a>
-			<div class="boton" onclick="ganar1vida(document.getElementById('vida_der'))">+1</div>
-			<div class="boton" onclick="ganar5vidas(document.getElementById('vida_der'))">+5</div>
+			<div class="boton" ontouchstart="ganar1vida(document.getElementById('vida_der'))">+1</div>
+			<div class="boton" ontouchstart="ganar5vidas(document.getElementById('vida_der'))">+5</div>
 		</div>
 		
 
