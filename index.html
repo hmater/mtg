@@ -15,7 +15,7 @@
 		}
 		#cont{
 			/*background-image: url('img/4.jpg');*/
-			background-color: rgb(155,10,10);
+			background-color: rgb(10,10,155);
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: 100% 100%;
@@ -81,18 +81,18 @@
 	<div id="cont">	
 
 		<div id="barra1">
-			<a href="#"><div id="vida_izq" onTouchStart="perder1vida(this)" style="display:inline">20</div>
+			<div id="vida_izq" onTouchStart="perder1vida(this)" style="display:inline">20</div>
 			<div style="display:inline">/</div>
-			<div id="vida_der" onTouchStart="perder1vida(this)" style="display:inline">20</div></a>
+			<div id="vida_der" onTouchStart="perder1vida(this)" style="display:inline">20</div>
 		</div>
 
 		<div id="barra2">
 
-			<a href="#"><div class="boton" onTouchStart="ganar1vida(document.getElementById('vida_izq'))">+1</div></a>
-			<a href="#"><div class="boton" onTouchStart="ganar5vidas(document.getElementById('vida_izq'))">+5</div></a>
+			<div class="boton" onTouchStart="ganar1vida(document.getElementById('vida_izq'))">+1</div>
+			<div class="boton" onTouchStart="ganar5vidas(document.getElementById('vida_izq'))">+5</div>
 			<a href=""><div class="boton" id="boton2">REPITO!</div></a>
-			<a href="#"><div class="boton" onTouchStart="ganar1vida(document.getElementById('vida_der'))">+1</div></a>
-			<a href="#"><div class="boton" onTouchStart="ganar5vidas(document.getElementById('vida_der'))">+5</div></a>
+			<div class="boton" onTouchStart="ganar1vida(document.getElementById('vida_der'))">+1</div>
+			<div class="boton" onTouchStart="ganar5vidas(document.getElementById('vida_der'))">+5</div>
 		</div>
 		
 
