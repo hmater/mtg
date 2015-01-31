@@ -7,6 +7,7 @@
 			margin: 0px;
 			padding: 0px;
 			color: white;
+			font-family: sans-serif;
 		}
 		a{
 			text-decoration: none;
@@ -14,7 +15,7 @@
 		}
 		#cont{
 			/*background-image: url('img/4.jpg');*/
-			background-color: rgb(255,110,110);
+			background-color: rgb(155,10,10);
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: 100% 100%;
@@ -73,7 +74,7 @@
 
 			<div class="boton" ontouchstart="ganar1vida(document.getElementById('vida_izq'))">+1</div>
 			<div class="boton" ontouchstart="ganar5vidas(document.getElementById('vida_izq'))">+5</div>
-			<div class="boton" id="boton2">REPITO!</div></a>
+			<a href=""><div class="boton" id="boton2">REPITO!</div></a>
 			<div class="boton" ontouchstart="ganar1vida(document.getElementById('vida_der'))">+1</div>
 			<div class="boton" ontouchstart="ganar5vidas(document.getElementById('vida_der'))">+5</div>
 		</div>
@@ -86,6 +87,53 @@
 </body>
 
 <script type="text/javascript">
+		function inicializar(){
+			var h = document.getElementById('barra1').offsetHeight;
+			var s = h*0.7;
+			var m = h*0.8*0.5;
+			var l = h*0.8*0.2;
+			var r = h*0.1;
+			document.getElementById('barra1').style.fontSize = s + "px";
+			document.getElementById('barra1').style.marginTop = m + "px";
+
+			var botones = document.getElementsByClassName('boton');
+			for (var i = botones.length - 1; i >= 0; i--) {
+				botones[i].style.fontSize = l + "px";
+			};
+
+			document.getElementById('boton2').style.fontSize = r + "px";
+		}
+
+		window.onload = inicializar();
+
+		window.onresize = function (){
+			var h = document.getElementById('barra1').offsetHeight;
+			var s = h*0.7;
+			var m = h*0.8*0.5;
+			var l = h*0.8*0.2;
+			var r = h*0.1;
+			document.getElementById('barra1').style.fontSize = s + "px";
+			document.getElementById('barra1').style.marginTop = m + "px";
+
+			var botones = document.getElementsByClassName('boton');
+			for (var i = botones.length - 1; i >= 0; i--) {
+				botones[i].style.fontSize = l + "px";
+			};
+
+			document.getElementById('boton2').style.fontSize = r + "px";
+		}
+
+		function perder1vida(Objeto){
+			Objeto.innerHTML = Objeto.innerHTML-1;
+		}
+		function ganar1vida(Objeto){
+			Objeto.innerHTML = Objeto.innerHTML-1+2;
+		}
+		function ganar5vidas(Objeto){
+			Objeto.innerHTML = Objeto.innerHTML-1+6;
+		}
+
+/*
 		window.onload = function(){
 			var h = document.getElementById('barra1').offsetHeight;
 			var s = h*0.8;
@@ -127,7 +175,7 @@
 		function ganar5vidas(Objeto){
 			Objeto.innerHTML = Objeto.innerHTML-1+6;
 		}
-
+*/
 </script>
 
 </html>
