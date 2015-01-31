@@ -1,13 +1,13 @@
 <html>
 <head>
-	<title>Simple MTG Life Counter</title>
+	<title></title>
 
 	<style type="text/css">
 		*{
 			margin: 0px;
 			padding: 0px;
 			color: white;
-			font-family: sans-serif;
+			font-family: serif;
 		}
 		a{
 			text-decoration: none;
@@ -36,6 +36,7 @@
 			top: 0;
 			bottom: 0;
 			text-align: center;
+			overflow: hidden;
 			/*font-size: ;*/
 			/*line-height: ;*/
 		}
@@ -46,37 +47,52 @@
 			margin-right: 2.5%;
 			margin-left: 2.5%;
 			width: 15%;
-			height: 10%;
+			height: 15%;
 			/*background-color: rgba(80,80,80,0.4);*/
 			background-color: rgba(10,10,10,0.6);
 			float: left;
 			display: inline;
 			text-align: center;
-			font-size: 50px;
+			/*font-size: 50px;*/
 			border-radius: 10px;
 			overflow: hidden;
 		}
 
 
+/*
+
+	*************************************************************************************************
+	*************************************************************************************************
+	*****  HACER QUE ESTE SIEMPRE GIRADO, -->> PREGUNTAR POR EL ALTO Y ANCHO DEL BODY, **************
+	*****  SI ALTO > ANCHO, ENTONCES NO ESTA GIRADO, POR LO TANTO GIRAR!, PARA GIRAR,  **************
+	*****  UTILIZAR FUNCION DE GIRAR CREADA EN EL PROYECTO MYL PARA EL CAMPO OPONENTE  **************
+	*************************************************************************************************
+	*************************************************************************************************
+	*************************************************************************************************
+
+*/
+
+
 	</style>
+
 
 </head>
 <body>
 	<div id="cont">	
 
 		<div id="barra1">
-			<div id="vida_izq" ontouchstart="perder1vida(this)" style="display:inline">20</div>
+			<a href="#"><div id="vida_izq" onTouchStart="perder1vida(this)" style="display:inline">20</div>
 			<div style="display:inline">/</div>
-			<div id="vida_der" ontouchstart="perder1vida(this)" style="display:inline">20</div>
+			<div id="vida_der" onTouchStart="perder1vida(this)" style="display:inline">20</div></a>
 		</div>
 
 		<div id="barra2">
 
-			<div class="boton" ontouchstart="ganar1vida(document.getElementById('vida_izq'))">+1</div>
-			<div class="boton" ontouchstart="ganar5vidas(document.getElementById('vida_izq'))">+5</div>
+			<a href="#"><div class="boton" onTouchStart="ganar1vida(document.getElementById('vida_izq'))">+1</div></a>
+			<a href="#"><div class="boton" onTouchStart="ganar5vidas(document.getElementById('vida_izq'))">+5</div></a>
 			<a href=""><div class="boton" id="boton2">REPITO!</div></a>
-			<div class="boton" ontouchstart="ganar1vida(document.getElementById('vida_der'))">+1</div>
-			<div class="boton" ontouchstart="ganar5vidas(document.getElementById('vida_der'))">+5</div>
+			<a href="#"><div class="boton" onTouchStart="ganar1vida(document.getElementById('vida_der'))">+1</div></a>
+			<a href="#"><div class="boton" onTouchStart="ganar5vidas(document.getElementById('vida_der'))">+5</div></a>
 		</div>
 		
 
@@ -87,6 +103,7 @@
 </body>
 
 <script type="text/javascript">
+
 		function inicializar(){
 			var h = document.getElementById('barra1').offsetHeight;
 			var s = h*0.7;
@@ -133,14 +150,22 @@
 			Objeto.innerHTML = Objeto.innerHTML-1+6;
 		}
 
-/*
-		window.onload = function(){
+		//$thing.bind('touchstart', function(event){...})
+
+
+
+
+
+
+		//////////////////////////////////////////////////////////////////////////////////////
+		/*
 			var h = document.getElementById('barra1').offsetHeight;
 			var s = h*0.8;
-			var l = s*0.15;
+			var m = s*0.5;
+			var l = s*0.2;
 			var r = h*0.1;
 			document.getElementById('barra1').style.fontSize = s + "px";
-			document.getElementById('barra1').style.lineHeight = s + "px";
+			document.getElementById('barra1').style.marginTop = m + "px";
 			
 			var botones = document.getElementsByClassName('boton');
 			for (var i = botones.length - 1; i >= 0; i--) {
@@ -148,34 +173,9 @@
 			};
 
 			document.getElementById('boton2').style.fontSize = r + "px";
+		*/
+////////////////////////////////////////////////////////////////////////////////////////
 
-		}
-		window.onresize = function() {
-    		var h = document.getElementById('barra1').offsetHeight;
-			var s = h*0.8;
-			var l = s*0.15;
-			var r = h*0.1;
-			document.getElementById('barra1').style.fontSize = s + "px";
-			document.getElementById('barra1').style.lineHeight = s + "px";
-
-			var botones = document.getElementsByClassName('boton');
-			for (var i = botones.length - 1; i >= 0; i--) {
-				botones[i].style.fontSize = l + "px";
-			};
-
-			document.getElementById('boton2').style.fontSize = r + "px";
-
-		}
-		function perder1vida(Objeto){
-			Objeto.innerHTML = Objeto.innerHTML-1;
-		}
-		function ganar1vida(Objeto){
-			Objeto.innerHTML = Objeto.innerHTML-1+2;
-		}
-		function ganar5vidas(Objeto){
-			Objeto.innerHTML = Objeto.innerHTML-1+6;
-		}
-*/
 </script>
 
 </html>
