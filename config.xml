@@ -5,7 +5,7 @@
         versionCode = "10" 
         version     = "1.0.0" >
         
-        <icon src="icon.PNG" width="57" height="57" density="mdpi" />
+        <icon src="icon2.png" width="57" height="57" />
 
     <!-- versionCode is optional and Android only -->
 
